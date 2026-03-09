@@ -3,6 +3,14 @@
   font-family: "Orbitron", sans-serif;
 }
 
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
 body {
   margin: 0;
   height: 100vh;
