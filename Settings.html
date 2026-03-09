@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Settings</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="menu-container">
+
+    <h1 class="game-title">SETTINGS</h1>
+
+    <div class="settings-box">
+
+      <div class="setting-row">
+        <span>Music</span>
+        <label class="switch">
+          <input type="checkbox" id="musicToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <span>Volume</span>
+        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+      </div>
+
+      <div class="setting-row">
+        <span>Fullscreen</span>
+        <button id="fullscreenBtn" class="small-btn">OFF</button>
+      </div>
+
+    </div>
+
+    <br>
+
+    <button id="backBtn" class="back-btn">BACK TO MAIN MENU</button>
+
+  </div>
+
+  <script src="Main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Trivia Game</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="menu-container">
+
+    <div id="scoreText" class="score-box">
+      Score: 0
+    </div>
+
+    <div class="top-icons">
+      <i id="backBtn" class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-shield-halved" id="shieldIcon"></i>
+    </div>
+
+    <div id="resultOverlay" class="overlay hidden">
+      <div class="overlay-box">
+
+        <h2 id="overlayText">
+          YOUR ANSWER WAS INCORRECT
+        </h2>
+
+        <div class="overlay-buttons">
+          <button id="menuBtn">MAIN MENU</button>
+          <button id="tryBtn">TRY AGAIN</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="shieldUI" class="shield-ui hidden">
+      🛡 SHIELD ACTIVE
+    </div>
+
+    <h1 class="game-title" id="categoryTitle">
+      CATEGORY
+    </h1>
+
+    <div class="question-box" id="questionBox">
+      Questions
+    </div>
+
+    <div class="category-buttons" id="answerButtons"></div>
+
+  </div>
+
+  <script src="Main.js"></script>
+
+</body>
+</html>
