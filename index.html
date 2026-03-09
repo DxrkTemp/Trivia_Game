@@ -1,28 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <title>Trivia Game</title>
 
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <div class="menu-container">
+  <div class="menu-container screen active" id="menuScreen">
 
-    <h1 class="game-title">TRIVIA GAME</h1>
+  <h1 class="game-title">TRIVIA GAME</h1>
 
-    <div class="menu-buttons">
-      <button id="playBtn">PLAY</button>
-      <button id="settingsBtn">SETTINGS</button>
+  <div class="menu-buttons">
+    <button id="playBtn">PLAY</button>
+    <button id="settingsBtn">SETTINGS</button>
+  </div>
+
+</div>
+
+<div class="menu-container screen" id="settingsScreen">
+
+  <h1 class="game-title">SETTINGS</h1>
+
+  <div class="settings-box">
+
+    <div class="setting-row">
+      <span>Music</span>
+
+      <label class="switch">
+        <input type="checkbox" id="musicToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span>Volume</span>
+      <input type="range" id="volumeSlider" min="0" max="100" value="50">
+    </div>
+
+    <div class="setting-row">
+      <span>Fullscreen</span>
+      <button id="fullscreenBtn" class="small-btn">OFF</button>
     </div>
 
   </div>
 
-  <script src="Main.js"></script>
+  <br>
+
+  <button class="back-btn" id="backSettings">
+    BACK TO MAIN MENU
+  </button>
+
+</div>
+
+<div class="menu-container screen" id="categoryScreen">
+
+  <h1 class="game-title">CHOOSE A CATEGORY</h1>
+
+  <div class="category-buttons">
+
+    <button class="category-btn" data-category="foods">
+      Foods
+    </button>
+
+    <button class="category-btn" data-category="songs">
+      Songs
+    </button>
+
+    <button class="category-btn" data-category="knowledge">
+      Knowledge
+    </button>
+
+    <button class="category-btn" data-category="programming">
+      Programming
+    </button>
+
+  </div>
+
+  <br>
+
+  <button class="back-btn" id="backCategory">
+    BACK TO MAIN MENU
+  </button>
+
+</div>
+
+<div class="menu-container screen" id="gameScreen">
+
+  <div id="scoreText" class="score-box">
+    Score: 0
+  </div>
+
+  <div class="top-icons">
+    <i id="homeBtn" class="fa-solid fa-house"></i>
+    <i id="shieldIcon" class="fa-solid fa-shield-halved"></i>
+  </div>
+
+  <div id="resultOverlay" class="overlay hidden">
+
+    <div class="overlay-box">
+
+      <h2 id="overlayText">
+        YOUR ANSWER WAS INCORRECT
+      </h2>
+
+      <div class="overlay-buttons">
+        <button id="menuBtn">MAIN MENU</button>
+        <button id="tryBtn">TRY AGAIN</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="shieldUI" class="shield-ui hidden">
+    🛡 SHIELD ACTIVE
+  </div>
+
+  <h1 class="game-title" id="categoryTitle">
+    CATEGORY
+  </h1>
+
+  <div class="question-box" id="questionBox">
+    Questions
+  </div>
+
+  <div class="category-buttons" id="answerButtons"></div>
+
+</div>
+
+
+<script src="Main.js"></script>
 
 </body>
 </html>
