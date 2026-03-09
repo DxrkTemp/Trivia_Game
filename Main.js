@@ -54,19 +54,55 @@ const shieldUI = document.getElementById("shieldUI");
 const questions = {
     foods: [
         { question: "Which fruit is yellow?", answers: ["Banana", "Apple", "Orange", "Grapes"], correct: 0 },
-        { question: "Which food is Italian?", answers: ["Pizza", "Burger", "Taco", "Sushi"], correct: 0 }
+        { question: "Which food is Italian?", answers: ["Pizza", "Burger", "Taco", "Sushi"], correct: 0 },
+        { question: "Which vegetable is green?", answers: ["Broccoli", "Carrot", "Potato", "Beetroot"], correct: 0 },
+        { question: "Which is a dairy product?", answers: ["Cheese", "Bread", "Rice", "Chicken"], correct: 0 },
+        { question: "Which food is commonly eaten for breakfast?", answers: ["Cereal", "Steak", "Sushi", "Burger"], correct: 0 },
+        { question: "Which fruit has seeds on the outside?", answers: ["Strawberry", "Apple", "Grapes", "Mango"], correct: 0 },
+        { question: "Which food is spicy?", answers: ["Chili", "Bread", "Milk", "Cheese"], correct: 0 },
+        { question: "Which meat is commonly used in bacon?", answers: ["Pork", "Beef", "Chicken", "Lamb"], correct: 0 },
+        { question: "Which is a type of pasta?", answers: ["Spaghetti", "Rice", "Bread", "Burger"], correct: 0 },
+        { question: "Which fruit is tropical?", answers: ["Mango", "Apple", "Strawberry", "Blueberry"], correct: 0 },
+        { question: "Which nut is used to make peanut butter?", answers: ["Peanut", "Almond", "Walnut", "Cashew"], correct: 0 }
     ],
     songs: [
         { question: "Who sang 'Thriller'?", answers: ["Michael Jackson", "Drake", "Eminem", "Adele"], correct: 0 },
-        { question: "Which is a K-Pop group?", answers: ["BTS", "Coldplay", "Maroon 5", "Imagine Dragons"], correct: 0 }
+        { question: "Which is a K-Pop group?", answers: ["BTS", "Coldplay", "Maroon 5", "Imagine Dragons"], correct: 0 },
+        { question: "Who is known as the Queen of Pop?", answers: ["Madonna", "Taylor Swift", "Beyoncé", "Rihanna"], correct: 0 },
+        { question: "Which song has the lyrics 'Let it be'?", answers: ["Let It Be", "Hey Jude", "Yellow Submarine", "Yesterday"], correct: 0 },
+        { question: "Who sang 'Shape of You'?", answers: ["Ed Sheeran", "Justin Bieber", "Shawn Mendes", "Bruno Mars"], correct: 0 },
+        { question: "Which band sang 'Bohemian Rhapsody'?", answers: ["Queen", "The Beatles", "Coldplay", "Nirvana"], correct: 0 },
+        { question: "Who is known as the 'King of Pop'?", answers: ["Michael Jackson", "Elvis Presley", "Prince", "Usher"], correct: 0 },
+        { question: "Which singer is Canadian?", answers: ["Justin Bieber", "Ed Sheeran", "Bruno Mars", "Adele"], correct: 0 },
+        { question: "Which song was sung by Adele?", answers: ["Hello", "Firework", "Rolling in the Deep", "Shape of You"], correct: 2 },
+        { question: "Which artist is part of Destiny's Child?", answers: ["Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry"], correct: 0 },
+        { question: "Which genre is BTS known for?", answers: ["K-Pop", "Rock", "Jazz", "Country"], correct: 0 }
     ],
     knowledge: [
         { question: "What planet do we live on?", answers: ["Earth", "Mars", "Jupiter", "Venus"], correct: 0 },
-        { question: "What is H2O?", answers: ["Water", "Salt", "Oxygen", "Hydrogen"], correct: 0 }
+        { question: "What is H2O?", answers: ["Water", "Salt", "Oxygen", "Hydrogen"], correct: 0 },
+        { question: "What gas do humans breathe in?", answers: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], correct: 0 },
+        { question: "Which is the largest ocean?", answers: ["Pacific", "Atlantic", "Indian", "Arctic"], correct: 0 },
+        { question: "How many continents are there?", answers: ["7", "5", "6", "8"], correct: 0 },
+        { question: "Which is the tallest mountain?", answers: ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"], correct: 0 },
+        { question: "Which animal is the largest?", answers: ["Blue Whale", "Elephant", "Giraffe", "Shark"], correct: 0 },
+        { question: "Which planet is known as the Red Planet?", answers: ["Mars", "Jupiter", "Venus", "Mercury"], correct: 0 },
+        { question: "Which organ pumps blood?", answers: ["Heart", "Lungs", "Kidney", "Liver"], correct: 0 },
+        { question: "Which is the fastest land animal?", answers: ["Cheetah", "Lion", "Horse", "Tiger"], correct: 0 },
+        { question: "What is the boiling point of water?", answers: ["100°C", "0°C", "50°C", "212°C"], correct: 0 }
     ],
     programming: [
         { question: "What language runs in the browser?", answers: ["JavaScript", "Python", "C++", "Java"], correct: 0 },
-        { question: "What does HTML stand for?", answers: ["HyperText Markup Language", "HighText Machine Language", "HyperLoop Machine Language", "None"], correct: 0 }
+        { question: "What does HTML stand for?", answers: ["HyperText Markup Language", "HighText Machine Language", "HyperLoop Machine Language", "None"], correct: 0 },
+        { question: "Which language is used for styling web pages?", answers: ["CSS", "Python", "C#", "Ruby"], correct: 0 },
+        { question: "Which is a backend language?", answers: ["Node.js", "HTML", "CSS", "Bootstrap"], correct: 0 },
+        { question: "What symbol is used to start a comment in JavaScript?", answers: ["//", "#", "<!--", "/*"], correct: 0 },
+        { question: "Which language is mainly used for iOS apps?", answers: ["Swift", "Java", "Python", "C#"], correct: 0 },
+        { question: "Which language is mainly used for Android apps?", answers: ["Java", "Swift", "C++", "Ruby"], correct: 0 },
+        { question: "Which is a database language?", answers: ["SQL", "HTML", "CSS", "Python"], correct: 0 },
+        { question: "Which is used for version control?", answers: ["Git", "HTML", "Python", "CSS"], correct: 0 },
+        { question: "Which framework is used with JavaScript for UI?", answers: ["React", "Django", "Flask", "Rails"], correct: 0 },
+        { question: "Which keyword declares a variable in JavaScript?", answers: ["let", "var", "const", "All of the above"], correct: 3 }
     ]
 };
 
@@ -175,3 +211,4 @@ menuBtn.onclick = () => {
     showScreen(menuScreen);
     resetShield();
 };
+
