@@ -150,11 +150,17 @@ function loadQuestion() {
     questionBox.textContent = currentQuestion.question;
     answerButtons.innerHTML = "";
 
-    currentQuestion.answers.forEach((answer, index) => {
+    const answers = currentQuestion.answers.map((ans, idx) => ({ text: ans, index: idx }));
+    for (let i = answers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [answers[i], answers[j]] = [answers[j], answers[i]];
+    }
+
+    answers.forEach(ansObj => {
         const btn = document.createElement("button");
-        btn.textContent = answer;
+        btn.textContent = ansObj.text;
         btn.classList.add("answer-btn");
-        btn.onclick = () => checkAnswer(index, btn);
+        btn.onclick = () => checkAnswer(ansObj.index, btn);
         answerButtons.appendChild(btn);
     });
 }
@@ -211,4 +217,5 @@ menuBtn.onclick = () => {
     showScreen(menuScreen);
     resetShield();
 };
+
 
