@@ -27,7 +27,7 @@ backBtns.forEach(btn => {
 
   btn.addEventListener("click", () => {
 
-    window.location.href = "Menu.html";
+    window.location.href = "index.html";
 
   });
 
